@@ -44,7 +44,7 @@ extension String {
         }
         return words
     }
-    func convertToLatin() -> String {
+    func convertToHangul() -> String {
        return self.stringByApplyingTransform(NSStringTransformLatinToHangul, reverse: false)!
     }
 }
@@ -60,6 +60,7 @@ class ViewController: UIViewController,UITextViewDelegate {
     }
     
     func setupTapGesture() {
+        
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: "handleTap:")
         self.view.addGestureRecognizer(gestureRecognizer)
     }
@@ -121,9 +122,7 @@ class ViewController: UIViewController,UITextViewDelegate {
     
     
     @IBAction func latinButtonTapped(sender: UIButton) {
-        textView.text = textView.text.convertToLatin()
-        
-        print(textView.text.convertToLatin())
+        textView.text = textView.text.convertToHangul()
     }
     
     func wordType() -> [String : String] {
