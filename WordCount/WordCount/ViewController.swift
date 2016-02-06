@@ -44,6 +44,9 @@ extension String {
         }
         return words
     }
+    func convertToLatin() -> String {
+       return self.stringByApplyingTransform(NSStringTransformLatinToHangul, reverse: false)!
+    }
 }
 
 class ViewController: UIViewController,UITextViewDelegate {
@@ -89,7 +92,7 @@ class ViewController: UIViewController,UITextViewDelegate {
         for word in pureWords {
             sum += word.characters.count
         }
-        showAlert("Number of Characters : ", message: "\(sum)")
+        showAlert("Number of characters : ", message: "\(sum)")
     }
     
     @IBAction func paragraphCount(sender: UIButton) {
@@ -116,6 +119,13 @@ class ViewController: UIViewController,UITextViewDelegate {
         presentViewController(detailVC, animated: true, completion: nil)
     }
     
+    
+    @IBAction func latinButtonTapped(sender: UIButton) {
+        textView.text = textView.text.convertToLatin()
+        
+        print(textView.text.convertToLatin())
+    }
+    
     func wordType() -> [String : String] {
         
         var result: [String : String] = [:]
@@ -127,7 +137,6 @@ class ViewController: UIViewController,UITextViewDelegate {
         tagger.string = question
         tagger.enumerateTagsInRange(NSMakeRange(0, (question as NSString).length), scheme: NSLinguisticTagSchemeNameTypeOrLexicalClass, options: options) { (tag, tokenRange, _, _) in
             let token = (question as NSString).substringWithRange(tokenRange)
-            print("\(token): \(tag)")
             result["\(token)"] = "\(tag)"
         }
         return result
@@ -143,7 +152,6 @@ class ViewController: UIViewController,UITextViewDelegate {
                 result.append((wordsArr[i], wordsArr[j]))
             }
         }
-        print(result)
         return result
     }
     
