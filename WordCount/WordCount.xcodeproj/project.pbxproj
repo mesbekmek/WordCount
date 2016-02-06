@@ -14,6 +14,7 @@
 		18F7E21E1C65512E00B6574D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F7E21C1C65512E00B6574D /* LaunchScreen.storyboard */; };
 		18F7E2291C65512E00B6574D /* WordCountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F7E2281C65512E00B6574D /* WordCountTests.swift */; };
 		18F7E2341C65512E00B6574D /* WordCountUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F7E2331C65512E00B6574D /* WordCountUITests.swift */; };
+		18F7E2441C65A0CC00B6574D /* WordStatsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F7E2431C65A0CC00B6574D /* WordStatsDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		18F7E22F1C65512E00B6574D /* WordCountUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordCountUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F7E2331C65512E00B6574D /* WordCountUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCountUITests.swift; sourceTree = "<group>"; };
 		18F7E2351C65512E00B6574D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18F7E2431C65A0CC00B6574D /* WordStatsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordStatsDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				18F7E2131C65512E00B6574D /* AppDelegate.swift */,
 				18F7E2151C65512E00B6574D /* ViewController.swift */,
+				18F7E2431C65A0CC00B6574D /* WordStatsDetailViewController.swift */,
 				18F7E2171C65512E00B6574D /* Main.storyboard */,
 				18F7E21A1C65512E00B6574D /* Assets.xcassets */,
 				18F7E21C1C65512E00B6574D /* LaunchScreen.storyboard */,
@@ -259,6 +262,7 @@
 			files = (
 				18F7E2161C65512E00B6574D /* ViewController.swift in Sources */,
 				18F7E2141C65512E00B6574D /* AppDelegate.swift in Sources */,
+				18F7E2441C65A0CC00B6574D /* WordStatsDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +407,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WordCount/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mesfin.nyc.WordCount;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -417,6 +422,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WordCount/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mesfin.nyc.WordCount;
 				PRODUCT_NAME = "$(TARGET_NAME)";
